@@ -502,8 +502,8 @@ This project is for educational and research purposes. Not financial advice.
 ## 📞 Contact
 
 **Author**: Shivam Singh (Jain Capital)
-**Project Start Date**: November 2024
-**Last Updated**: January 2025
+**Project Start Date**: March 2025
+**Last Updated**: January 2026
 
 ---
 
