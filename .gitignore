@@ -1,1 +1,79 @@
+# ============================================
+# JAIN CAPITAL TRADING SYSTEM - GITIGNORE
+# ============================================
+
+# Environment variables and secrets
 .env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+credentials/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Trading data and logs
+data/
+data_cache/
+logs/
+*.log
+nohup.out
+
+# Backtest results (keep structure, ignore large CSVs)
+eval_results/**/*.csv
+eval_results/**/*.json
+*.txt
+!requirements.txt
+!README.md
+
+# API response cache
+*.cache
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Operating system files
+.DS_Store
+Thumbs.db
