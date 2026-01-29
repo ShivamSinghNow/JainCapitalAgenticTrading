@@ -1,0 +1,15 @@
+{
+  "symbol": "BTC-USD",
+  "initial_capital": 10000.0,
+  "final_capital": 9989.75078043434,
+  "total_return_pct": -0.10249219565659587,
+  "buy_hold_return_pct": 33.333217146951185,
+  "total_trades": 8,
+  "wins": 2,
+  "losses": 6,
+  "win_rate": 25.0,
+  "avg_win": 13.999993140000019,
+  "avg_loss": -6.374867640943022,
+  "sharpe_ratio": -1.034768501764266,
+  "max_drawdown": 0.31183720076283034
+}

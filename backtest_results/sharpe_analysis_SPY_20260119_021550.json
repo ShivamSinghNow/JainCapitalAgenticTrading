@@ -1,0 +1,19 @@
+{
+  "symbol": "SPY",
+  "period_days": 18,
+  "start_date": "2025-12-22 00:00:00",
+  "end_date": "2026-01-16 00:00:00",
+  "buy_hold": {
+    "total_return_pct": 0.9973213621259136,
+    "sharpe_ratio": 1.9751298381147924,
+    "max_drawdown_pct": -1.2254152659146507,
+    "volatility_pct": 6.549627252155682
+  },
+  "strategy": {
+    "total_return_pct": 0.0,
+    "sharpe_ratio": 0.0,
+    "max_drawdown_pct": 0.0,
+    "volatility_pct": 0.0
+  },
+  "timestamp": "2026-01-19T02:15:50.471352"
+}

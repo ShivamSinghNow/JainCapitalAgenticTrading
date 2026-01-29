@@ -1,0 +1,19 @@
+{
+  "symbol": "BTC-USD",
+  "period_days": 30,
+  "start_date": "2025-12-20 00:00:00",
+  "end_date": "2026-01-18 00:00:00",
+  "buy_hold": {
+    "total_return_pct": 5.988442551276818,
+    "sharpe_ratio": 2.335407078157277,
+    "max_drawdown_pct": -3.7237016628238946,
+    "volatility_pct": 21.785255622386718
+  },
+  "strategy": {
+    "total_return_pct": 0.0,
+    "sharpe_ratio": 0.0,
+    "max_drawdown_pct": 0.0,
+    "volatility_pct": 0.0
+  },
+  "timestamp": "2026-01-19T02:15:50.066166"
+}

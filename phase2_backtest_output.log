@@ -1,0 +1,837 @@
+/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py:85: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  price_data = yf.download(symbol, start=start_date, end=end_date, progress=False)
+🚀 Running Phase 2 Backtest with On-Chain & Social Sentiment Tools
+
+================================================================================
+🔄 PHASE 2 BACKTEST - ON-CHAIN & SOCIAL SENTIMENT TOOLS
+================================================================================
+Symbol: BTC-USD
+Period: 2024-11-01 to 2024-12-31
+Initial Capital: $10,000.00
+Risk per Trade: 2.0%
+================================================================================
+
+🧹 Cleaning persistent memory...
+
+📊 Downloading price data for BTC-USD...
+✅ Downloaded 60 days of price data
+
+
+================================================================================
+📅 Trading Day 1/9: 2024-11-01
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-11-01...
+================================ Human Message =================================
+
+BTC-USD
+================================== Ai Message ==================================
+Tool Calls:
+  get_order_book_imbalance (call_fc0TL43JOCkX2SEoo8WcG9TI)
+ Call ID: call_fc0TL43JOCkX2SEoo8WcG9TI
+  Args:
+    symbol: BTCUSDT
+  get_taker_buysell_volume (call_dLROTeyUcP9CVl50cyhMM5RH)
+ Call ID: call_dLROTeyUcP9CVl50cyhMM5RH
+  Args:
+    symbol: BTCUSDT
+    interval: 1h
+    limit: 24
+  get_funding_rate (call_ekgw7JfhLkwmNjYl9HzbvBHb)
+ Call ID: call_ekgw7JfhLkwmNjYl9HzbvBHb
+  Args:
+    symbol: BTCUSDT
+    limit: 10
+  get_open_interest (call_XPBc2uE67USxcHea612arBZQ)
+ Call ID: call_XPBc2uE67USxcHea612arBZQ
+  Args:
+    symbol: BTCUSDT
+  get_fear_greed_index (call_u7KGtWaJeWiHe9qPFkDe6hEo)
+ Call ID: call_u7KGtWaJeWiHe9qPFkDe6hEo
+  Args:
+  get_coincap_rankings (call_iSJuf3NZ3xW3UaQ61SbUCH8G)
+ Call ID: call_iSJuf3NZ3xW3UaQ61SbUCH8G
+  Args:
+    limit: 20
+================================= Tool Message =================================
+Name: get_coincap_rankings
+
+Error fetching CoinCap rankings: HTTPSConnectionPool(host='api.coincap.io', port=443): Max retries exceeded with url: /v2/assets?limit=20 (Caused by NameResolutionError("HTTPSConnection(host='api.coincap.io', port=443): Failed to resolve 'api.coincap.io' ([Errno 8] nodename nor servname provided, or not known)"))
+================================== Ai Message ==================================
+
+### Detailed Analysis of BTC-USD (BTCUSDT)
+
+#### 1. **Order Book Imbalance**
+- **Best Bid**: $90,986.41
+- **Best Ask**: $90,986.42
+- **Spread**: $0.01
+- **Total Bid Volume**: 6.4187 (64.20%)
+- **Total Ask Volume**: 3.5800 (35.80%)
+- **Order Book Imbalance**: **Strong Buy Pressure** - More bids than asks indicate upward price pressure likely.
+
+**Interpretation**: The order book suggests a robust demand for BTC with a significant imbalance favoring buyers. Such conditions can lead to upward price movements, particularly if the trend continues over time.
+
+---
+
+#### 2. **Taker Buy/Sell Volume Analysis (Last Hour)**
+
+**Hourly Breakdown**:
+- **2026-01-19 21:00**: Buy=67.2%, Sell=32.8% (Aggressive Buying)
+- **2026-01-19 22:00**: Buy=52.1%, Sell=47.9% (Balanced)
+- **2026-01-19 23:00**: Buy=52.4%, Sell=47.6% (Balanced)
+- **2026-01-20 00:00**: Buy=10.5%, Sell=89.5% (Aggressive Selling)
+- **2026-01-20 01:00**: Buy=94.7%, Sell=5.3% (Aggressive Buying)
+
+**Overall Ratios**:
+- **Overall Taker Buy**: 51.10%
+- **Overall Taker Sell**: 48.90%
+
+**Market Sentiment**: **Neutral** - The slight preference for buying over selling reflects a balance in market sentiment.
+
+**Interpretation**: The market remains cautiously optimistic due to the recent spikes in aggressive buying, although some hourly data suggests volatility. This could indicate indecision among traders, and sudden shifts in these tactics may signal emerging trends.
+
+---
+
+#### 3. **Crypto Fear & Greed Index**
+- **Current Index Value**: 32/100 (Fear)
+- **7-Day Average**: 47.6/100
+- **30-Day Average**: 31.3/100
+- **Trend**: Sentiment has deteriorated significantly by 11 points over the past week.
+
+**Interpretation**: With a current fear index, the market displays a cautious outlook. This level is not extreme, but it suggests investors are responding negatively to market conditions. Generally, fear can represent potential buying opportunities. However, traders should consider this signal carefully within the context of other market analyses.
+
+---
+
+#### Final Notes
+- Due to limitations in data gathering for the funding rates and open interest from futures trading, the analysis cannot draw conclusions from those perspectives at this time. It might be advisable to analyze BTC trading on platforms that support these metrics effectively.
+- The signs from both the Order Book Imbalance and Taker Buy/Sell Volume suggest potential upward momentum in BTC prices, while the current sentiment could offer opportunities to buy selectively during dips.
+
+### Summary Table
+
+| Indicator                  | Value/Status                           | Insight                                      |
+|---------------------------|----------------------------------------|----------------------------------------------|
+| **Order Book Imbalance**   | Strong Buy Pressure                    | Likely upward price movement                 |
+| **Taker Buy/Sell Ratio**   | Buying: 51.10%, Selling: 48.90%       | Neutral sentiment, with slight buying bias   |
+| **Fear & Greed Index**    | 32/100 (Fear)                         | Caution in the market; selective buying advised|
+| **Current Price**         | $90,986.41 (Best Bid)                | Indicates overall market valuation            |
+
+**FINAL TRANSACTION PROPOSAL**: **BUY**  (Given the strong buy pressure and potential for upward momentum, while closely monitoring for dips and market sentiment.)
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+Tool Calls:
+  get_coingecko_community_stats (call_w0X5Sz6hTOQKUf2n1xGNEgVT)
+ Call ID: call_w0X5Sz6hTOQKUf2n1xGNEgVT
+  Args:
+    ticker: BTC
+  get_cryptocompare_social_stats (call_UXwSECqlo1XGBnLmhKQL6koR)
+ Call ID: call_UXwSECqlo1XGBnLmhKQL6koR
+  Args:
+    ticker: BTC
+  get_reddit_crypto_sentiment (call_RrZOzxiQvS2zSJSZkBxVIbv8)
+ Call ID: call_RrZOzxiQvS2zSJSZkBxVIbv8
+  Args:
+    subreddit: bitcoin
+  get_github_dev_activity (call_IdNFUzOm2UfKoCot3G6rIomy)
+ Call ID: call_IdNFUzOm2UfKoCot3G6rIomy
+  Args:
+    ticker: BTC
+================================= Tool Message =================================
+Name: get_github_dev_activity
+
+## GitHub Development Activity: bitcoin/bitcoin
+
+### Repository Stats:
+- **Stars**: 87,720
+- **Forks**: 38,741
+- **Watchers**: 87,720
+- **Open Issues**: 757
+
+### Recent Activity (Last 4 Weeks):
+- **Commits**: 97
+
+### Analysis:
+- ✅ Active development (97 commits/4wks)
+- ⭐ Highly popular project
+
+================================== Ai Message ==================================
+
+Here’s the detailed analysis of Bitcoin (BTC) based on community sentiment, social media engagement, and development activity:
+
+### 1. CoinGecko Community Stats for Bitcoin (BTC)
+- **Social Media Following**: Unfortunately, no social media data is available from CoinGecko for this assessment.
+- **Community Analysis**: Cannot be drawn conclusively due to the lack of data.
+
+### 2. CryptoCompare Social Stats for BTC
+- **Metrics**: No specific metrics or data points were retrieved from CryptoCompare.
+
+### 3. Reddit Sentiment from r/bitcoin
+- **Top Posts Analysis**:
+  - **Bitcoin Newcomers FAQ - Please read!**
+    - Score: 73 | Comments: 25 | Upvote Ratio: 98%
+  - **Daily Discussion, January 20, 2026**
+    - Score: 15 | Comments: 19 | Upvote Ratio: 100%
+  - **Depends on the setup**
+    - Score: 972 | Comments: 36 | Upvote Ratio: 99%
+  - **Anyone?**
+    - Score: 875 | Comments: 47 | Upvote Ratio: 99%
+  - **Why every time I buy, I manage to buy the peak and not the lows.**
+    - Score: 74 | Comments: 76 | Upvote Ratio: 89%
+
+- **Community Metrics**:
+  - **Average Score**: 201
+  - **Average Comments**: 21
+  - **Average Upvote Ratio**: 89%
+  
+- **Sentiment**: The high upvote ratio (89%) across posts suggests a predominantly **bullish sentiment** among the community.
+
+### 4. GitHub Development Activity for Bitcoin
+- **Repository Stats**:
+  - **Stars**: 87,720
+  - **Forks**: 38,741
+  - **Watchers**: 87,720
+  - **Open Issues**: 757
+
+- **Recent Activity (Last 4 Weeks)**:
+  - **Commits**: 97
+
+- **Analysis**: Active development with 97 commits over the past four weeks indicates that the project is actively maintained and evolving, which is a positive sign for long-term investors.
+
+### Summary
+- **Community Engagement**: Reddit sentiment suggests a strong and positive engagement, with significant upvotes indicating a robust community interest.
+- **Development Activity**: GitHub activity shows that Bitcoin is under active development, which is beneficial for maintaining interest and confidence among investors.
+- **Social Media Metrics**: Lack of comprehensive social media data from CoinGecko or CryptoCompare limits a fuller picture of the social sentiment.
+
+### Conclusion
+Given the positive sentiment on Reddit and active development indicators, Bitcoin currently shows signs of strong community support and ongoing project health.
+
+| Metric                    | Value                      |
+|---------------------------|----------------------------|
+| Reddit Average Upvote Ratio | 89%                         |
+| Recent GitHub Commits      | 97 (last 4 weeks)         |
+| Stars on GitHub            | 87,720                     |
+| Positive Reddit Sentiment   | Yes                        |
+
+**FINAL TRANSACTION PROPOSAL: BUY** 
+The indicators suggest a healthy community and ongoing development, making Bitcoin (BTC) a favorable investment at this time.
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+Tool Calls:
+  get_global_news_openai (call_Qzq6xrXPCvgISZAk3RX3e9HS)
+ Call ID: call_Qzq6xrXPCvgISZAk3RX3e9HS
+  Args:
+    curr_date: 2024-11-01
+  get_crypto_news_rss (call_FVdn7wzO0HFq2dHiHtecjEC3)
+ Call ID: call_FVdn7wzO0HFq2dHiHtecjEC3
+  Args:
+    curr_date: 2024-11-01
+    look_back_days: 7
+  get_crypto_news_cryptocompare (call_5gSpyHLGOm7MEu7E6fgqdlgK)
+ Call ID: call_5gSpyHLGOm7MEu7E6fgqdlgK
+  Args:
+    categories: BTC
+    limit: 20
+  get_crypto_news_cryptopanic (call_zD0iQGfSQHq94MnNK5AgBiPl)
+ Call ID: call_zD0iQGfSQHq94MnNK5AgBiPl
+  Args:
+    ticker: BTC
+    curr_date: 2024-11-01
+    look_back_days: 7
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+================================= Tool Message =================================
+Name: get_crypto_news_cryptopanic
+
+## Crypto News from RSS Feeds (CryptoPanic unavailable)
+**Note**: CryptoPanic API blocked by Cloudflare. Using reliable RSS sources instead.
+
+No RSS news articles found for the specified date range.
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 108, in run_backtest
+    decision_result = decide(symbol, trade_date)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/run_decision.py", line 43, in decide
+    ta = TradingAgentsGraph(debug=True, config=cfg)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/graph/trading_graph.py", line 76, in __init__
+    self.bull_memory = FinancialSituationMemory("bull_memory", self.config)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/TradingAgents/tradingagents/agents/utils/memory.py", line 14, in __init__
+    self.situation_collection = self.chroma_client.create_collection(name=name)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/client.py", line 147, in create_collection
+    model = self._server.create_collection(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 103, in wrapper
+    return self._rate_limit_enforcer.rate_limit(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/rate_limit/simple_rate_limit/__init__.py", line 24, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/api/segment.py", line 242, in create_collection
+    coll, created = self._sysdb.create_collection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/telemetry/opentelemetry/__init__.py", line 150, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/chromadb/db/mixins/sysdb.py", line 305, in create_collection
+    raise UniqueConstraintError(f"Collection {name} already exists")
+chromadb.errors.UniqueConstraintError: Collection bull_memory already exists
+================================== Ai Message ==================================
+
+### Comprehensive Report on Current Economic and Cryptocurrency Landscape (as of November 1, 2024)
+
+#### Global Macroeconomic Overview
+The macroeconomic environment remains dynamic as we approach the US elections. Recent reports indicate:
+- **US Economic Growth**: The U.S. economy grew at a remarkable **2.8%** pace last quarter, primarily fueled by robust consumer spending, signaling confidence among consumers despite potential uncertainties ahead.
+- **Geopolitical Risks**: Ongoing conflicts, particularly in Yemen, and regional tensions are sparking concerns about their broader economic impact globally. Analysts are watching closely how these tensions could affect economic stability and growth.
+- **Global Policy Challenges**: Key officials, including Nozi Okonjo-Iweala, have emphasized the need for multilateral cooperation to tackle emerging economic challenges effectively.
+- **Regional Economies**: Countries like Ethiopia and Nigeria are engaging in macroeconomic reforms aimed at driving private-sector growth and stabilizing their economies in light of recent crises.
+
+These macroeconomic indicators reflect a complex environment for traders and investors, highlighting potential vulnerabilities amid signs of growth.
+
+#### Cryptocurrency Market Analysis
+The cryptocurrency market, particularly Bitcoin (BTC), is experiencing significant volatility with several notable trends and events:
+
+1. **Price Trends and Predictions**:
+   - Bitcoin has recently fallen below the **$91,000** threshold due to a combination of bearish sentiment and external geopolitical factors, drawing attention away from cryptocurrencies towards safe havens like gold.
+   - Analysts are predicting potential declines of **30-37%** in Bitcoin's price, with targets ranging between **$58,000 and $62,000**. This forecast is influencing investor sentiment, given the historical context of Bitcoin's price movements.
+  
+2. **Market Sentiment**:
+   - New Bitcoin holders are facing losses as **30-day realized losses** have intensified for the first time since late 2023, marking a shift in market dynamics.
+   - A substantial transfer of **909.38 BTC** (approximately **$85 million**) from a dormant wallet has created buzz, possibly steering discussions about market maturity and liquidity.
+   - Institutional demand remains robust, as significant custody wallets accumulated **$53 billion** in Bitcoin over the past year, indicating continued interest from large investors.
+
+3. **Geopolitical Impacts**:
+   - The political landscape, particularly tensions surrounding potential U.S. territorial claims in Greenland, is influencing market behavior, highlighting the interconnectedness of global events and cryptocurrency valuations.
+
+4. **Technological and Regulatory Developments**:
+   - In Hong Kong, a push from local professionals is advocating for eased cryptocurrency reporting requirements ahead of impending regulations, suggesting a trend towards regulatory clarity could bolster market confidence.
+
+#### Summary Table of Key Points
+
+| Category                     | Details                                                                                                                                          |
+|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| **US Economic Growth**       | 2.8% growth fueled by consumer spending.                                                                                                       |
+| **Geopolitical Concerns**    | Conflicts in Yemen heighten economic risk assessments; focus on multilateral cooperation is required.                                           |
+| **Bitcoin Current Price**    | Recently fell below $91,000; bearish predictions suggest a potential crash to $58,000-$62,000.                                                 |
+| **Market Sentiment**         | New buyers are seeing losses; 30-day loss period marks a critical moment for investors.                                                        |
+| **Institutional Demand**     | Accumulated **$53 billion** in Bitcoin reveals strong institutional interest despite market volatility.                                          |
+| **Regulatory Landscape**      | Hong Kong industry bodies push for regulatory adjustments ahead of widespread conformity to new reporting standards.                             |
+
+### Conclusion
+The interplay between macroeconomic conditions and the cryptocurrency market is creating a cautious atmosphere among traders. With rising geopolitical tensions impacting price movements, Bitcoin investors should be particularly vigilant regarding market sentiment and potential downturns. The continued institutional interest offers a glimmer of stability, but uncertainty remains high as global events unfold. 
+
+#### NOTE
+Given the current context, traders should weigh these insights and maintain a diversified and informed investment strategy while monitoring both economic and cryptocurrency market developments. Further analysis may be warranted as these conditions evolve.
+
+**FINAL TRANSACTION PROPOSAL: HOLD**
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+Tool Calls:
+  get_coingecko_market_metrics (call_QrA7r68mEJK6ZLr1EQbj0VDd)
+ Call ID: call_QrA7r68mEJK6ZLr1EQbj0VDd
+  Args:
+    ticker: BTC
+  get_coingecko_developer_activity (call_EXjaGrsDA3zCOGABTcDc02H8)
+ Call ID: call_EXjaGrsDA3zCOGABTcDc02H8
+  Args:
+    ticker: BTC
+  get_bitcoin_network_metrics (call_LvIyZ4o0Oq8DRFEYt9B2oTBP)
+ Call ID: call_LvIyZ4o0Oq8DRFEYt9B2oTBP
+  Args:
+  get_bitcoin_mining_metrics (call_XKIAkhe49YROaJeW0zrUre8l)
+ Call ID: call_XKIAkhe49YROaJeW0zrUre8l
+  Args:
+================================= Tool Message =================================
+Name: get_bitcoin_mining_metrics
+
+## Bitcoin Mining Metrics
+
+### Network Hashrate & Difficulty:
+- **Network Hash Rate**: 1135865.79 EH/s
+- **Current Difficulty**: 146,472,570,619,930
+- **Next Difficulty Adjustment**: Block 933,407
+
+### Block Production:
+- **Total Blocks Mined**: 933,068
+- **Blocks (24h)**: 156
+- **Average Block Time**: 8.7 minutes
+- **Target Block Time**: 10.0 minutes
+- **Variance from Target**: -13.4%
+
+### Miner Revenue (24h Estimate):
+- **Block Subsidy**: 487.50 BTC ($44,411,396)
+- **Transaction Fees**: -487.50 BTC ($-44,411,396)
+- **Total Revenue**: 0.00 BTC ($0)
+
+### Mining Economics:
+- **Revenue per EH/s/day**: $0.00
+- **Current BTC Price**: $91,100.30
+
+### Mining Analysis:
+- ⬆️  Faster than target blocks (8.7 min) - Difficulty likely to INCREASE
+- 🔒 Extremely high network security (1135866 EH/s)
+- ⚠️  Low fee revenue (0.0%) - Miners heavily reliant on subsidy
+
+================================== Ai Message ==================================
+
+### Analysis of Bitcoin (BTC-USD)
+
+#### 1. Market Metrics
+**Current Price**: $90,870.00  
+- **Market Capitalization**: $1,815,146,633,561 (Rank: #1)
+- **Circulating Supply**: 19,978,275 BTC (95.13% of Max Supply: 21,000,000 BTC)
+- **24h Trading Volume**: $39,039,738,006
+- **Price Changes**: 
+  - 24h: -2.26%
+  - 7 Days: -1.30%
+  - 30 Days: +2.67%
+  - 1 Year: -15.18%
+- **All-Time High**: $126,080.00 (2025-10-06) [Distance: -27.93%]
+  
+**Analysis**:
+- The significant market capitalization and a high percentage of circulating supply indicate limited new supply pressure in the market.
+- The recent drop in price indicates either a correction or market uncertainty. The price has dropped approximately 15% over the last year despite a slight recovery over a 30-day span.
+
+#### 2. Developer Activity
+**GitHub Stats**:
+- **Commits (Last 4 Weeks)**: 108
+- **Contributors**: 846
+- **Net Lines Changed**: +3,518
+- **Issues Closed**: 95.3% closure rate
+
+**Analysis**:
+- The active development indicated by 108 commits and a large contributor base reflects strong community support and ongoing improvements.
+- The impressive issue management ratio suggests a healthy project, as problems are being resolved promptly.
+
+#### 3. Network Metrics
+**Hash Rate**: 1,135,865.79 EH/s  
+**Transaction Activity**:
+- **Total Transactions (24h)**: 395,690
+- **Average Block Time**: 8.7 minutes
+- **Mempool Size**: 0.00 MB (Very low, indicating immediate confirmation)
+
+**Analysis**:
+- The network’s hash rate is exceptionally high, ensuring security. Faster than average block production time suggests active mining.
+- Healthy transaction activity highlights continued user engagement and network reliability.
+
+#### 4. Mining Metrics
+**Mining Statistics**:
+- **Estimated Fees (24h)**: -487.50 BTC indicating dependence on block subsidies.
+- **Block Production (Last 24h)**: 156 blocks
+
+**Analysis**:
+- The current mining scenario highlights extremely high network security but low fee revenue which is concerning. Miners are primarily reliant on block subsidies, which may affect profitability.
+
+### Conclusion
+Overall, Bitcoin remains a prominent player in the crypto market with solid development activity, a healthy transaction rate, and robust network security due to high hash rates. However, the recent negative price trends and low miners' fee revenue raise some concerns. Given its established network health and active development, Bitcoin still holds potential for the long term.
+
+| Metric                          | Value                        |
+|---------------------------------|------------------------------|
+| **Current Market Cap**          | $1,815,146,633,561          |
+| **Current Price**               | $90,870.00                   |
+| **Market Cap Rank**             | #1                           |
+| **Circulating Supply (BTC)**    | 19,978,275 (95.13% Max)     |
+| **24h Trading Volume**          | $39,039,738,006             |
+| **Recent Price Trends**         | 24h: -2.26%, Weekly: -1.30% |
+| **GitHub Commits (4w)**        | 108                          |
+| **Active Contributors**         | 846                          |
+| **Hash Rate (EH/s)**           | 1,135,865.79                |
+| **Avg Block Time (minutes)**    | 8.7                          |
+| **Mempool Size**                | 0.00 MB                     |
+
+FINAL TRANSACTION PROPOSAL: **HOLD**
+================================ Human Message =================================
+
+Continue
+================================ Human Message =================================
+
+Continue
+================================ Human Message =================================
+
+Continue
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+
+After considering the comprehensive investment plan and weighing the arguments presented by both the Bull and Bear Analysts, I believe it is prudent to take a cautious approach. The concerns raised by the Bear Analyst regarding the current market volatility, macroeconomic instability, and potential declines of 30-37% from recent highs are too significant to ignore.
+
+Thus, based on these insights, my recommendation is to **sell** any existing Bitcoin holdings. The rationale for this is clear: by locking in profits now, we avoid potential significant losses in the future. Moreover, the market's reliance on institutional investors adds a level of risk that makes the current investment climate uncertain.
+
+By selling, we can also remain agile, allowing for the opportunity to reassess the situation once the market corrects. This enables us to strategically position ourselves for future investment opportunities that may arise either in Bitcoin or alternative cryptocurrencies that show promise.
+
+Therefore, the FINAL TRANSACTION PROPOSAL is: **SELL**.
+================================== Ai Message ==================================
+
+After considering the comprehensive investment plan and weighing the arguments presented by both the Bull and Bear Analysts, I believe it is prudent to take a cautious approach. The concerns raised by the Bear Analyst regarding the current market volatility, macroeconomic instability, and potential declines of 30-37% from recent highs are too significant to ignore.
+
+Thus, based on these insights, my recommendation is to **sell** any existing Bitcoin holdings. The rationale for this is clear: by locking in profits now, we avoid potential significant losses in the future. Moreover, the market's reliance on institutional investors adds a level of risk that makes the current investment climate uncertain.
+
+By selling, we can also remain agile, allowing for the opportunity to reassess the situation once the market corrects. This enables us to strategically position ourselves for future investment opportunities that may arise either in Bitcoin or alternative cryptocurrencies that show promise.
+
+Therefore, the FINAL TRANSACTION PROPOSAL is: **SELL**.
+================================== Ai Message ==================================
+
+After considering the comprehensive investment plan and weighing the arguments presented by both the Bull and Bear Analysts, I believe it is prudent to take a cautious approach. The concerns raised by the Bear Analyst regarding the current market volatility, macroeconomic instability, and potential declines of 30-37% from recent highs are too significant to ignore.
+
+Thus, based on these insights, my recommendation is to **sell** any existing Bitcoin holdings. The rationale for this is clear: by locking in profits now, we avoid potential significant losses in the future. Moreover, the market's reliance on institutional investors adds a level of risk that makes the current investment climate uncertain.
+
+By selling, we can also remain agile, allowing for the opportunity to reassess the situation once the market corrects. This enables us to strategically position ourselves for future investment opportunities that may arise either in Bitcoin or alternative cryptocurrencies that show promise.
+
+Therefore, the FINAL TRANSACTION PROPOSAL is: **SELL**.
+================================== Ai Message ==================================
+
+After considering the comprehensive investment plan and weighing the arguments presented by both the Bull and Bear Analysts, I believe it is prudent to take a cautious approach. The concerns raised by the Bear Analyst regarding the current market volatility, macroeconomic instability, and potential declines of 30-37% from recent highs are too significant to ignore.
+
+Thus, based on these insights, my recommendation is to **sell** any existing Bitcoin holdings. The rationale for this is clear: by locking in profits now, we avoid potential significant losses in the future. Moreover, the market's reliance on institutional investors adds a level of risk that makes the current investment climate uncertain.
+
+By selling, we can also remain agile, allowing for the opportunity to reassess the situation once the market corrects. This enables us to strategically position ourselves for future investment opportunities that may arise either in Bitcoin or alternative cryptocurrencies that show promise.
+
+Therefore, the FINAL TRANSACTION PROPOSAL is: **SELL**.
+================================== Ai Message ==================================
+
+After considering the comprehensive investment plan and weighing the arguments presented by both the Bull and Bear Analysts, I believe it is prudent to take a cautious approach. The concerns raised by the Bear Analyst regarding the current market volatility, macroeconomic instability, and potential declines of 30-37% from recent highs are too significant to ignore.
+
+Thus, based on these insights, my recommendation is to **sell** any existing Bitcoin holdings. The rationale for this is clear: by locking in profits now, we avoid potential significant losses in the future. Moreover, the market's reliance on institutional investors adds a level of risk that makes the current investment climate uncertain.
+
+By selling, we can also remain agile, allowing for the opportunity to reassess the situation once the market corrects. This enables us to strategically position ourselves for future investment opportunities that may arise either in Bitcoin or alternative cryptocurrencies that show promise.
+
+Therefore, the FINAL TRANSACTION PROPOSAL is: **SELL**.
+
+=== TRADING DECISION ===
+"HOLD"
+   Decision: HOLD - No trade executed
+
+================================================================================
+📅 Trading Day 2/9: 2024-11-08
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-11-08...
+❌ Error on 2024-11-08: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 3/9: 2024-11-15
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-11-15...
+❌ Error on 2024-11-15: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 4/9: 2024-11-22
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-11-22...
+❌ Error on 2024-11-22: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 5/9: 2024-11-29
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-11-29...
+❌ Error on 2024-11-29: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 6/9: 2024-12-06
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-12-06...
+❌ Error on 2024-12-06: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 7/9: 2024-12-13
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-12-13...
+❌ Error on 2024-12-13: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 8/9: 2024-12-20
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-12-20...
+❌ Error on 2024-12-20: Collection bull_memory already exists
+
+================================================================================
+📅 Trading Day 9/9: 2024-12-27
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-12-27...
+❌ Error on 2024-12-27: Collection bull_memory already exists
+
+================================================================================
+📊 CALCULATING PERFORMANCE METRICS
+================================================================================
+
+⚠️  No trades executed during backtest period
+   This means all decisions were HOLD
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    PHASE 2 BACKTEST RESULTS                                  ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  Symbol: BTC-USD                                                            ║
+╠══════════════════════════════════════════════════════════════════════════════╣
+║  Initial Capital:        $      10,000.00                        ║
+║  Final Capital:          $      10,000.00                        ║
+║  Total Return:                      0.00%                        ║
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 446, in <module>
+    main()
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 435, in main
+    results = backtest.run_backtest(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 136, in run_backtest
+    results = self._calculate_metrics(price_data, symbol)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 276, in _calculate_metrics
+    self._print_results(results)
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 349, in _print_results
+    print(f"║  Buy & Hold Return:      {results['buy_hold_return_pct']:>15.2f}%                        ║")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to Series.__format__

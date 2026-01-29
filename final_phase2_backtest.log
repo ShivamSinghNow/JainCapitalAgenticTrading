@@ -1,0 +1,595 @@
+/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py:85: FutureWarning: YF.download() has changed argument auto_adjust default to True
+  price_data = yf.download(symbol, start=start_date, end=end_date, progress=False)
+🚀 Running Phase 2 Backtest with On-Chain & Social Sentiment Tools
+
+================================================================================
+🔄 PHASE 2 BACKTEST - ON-CHAIN & SOCIAL SENTIMENT TOOLS
+================================================================================
+Symbol: BTC-USD
+Period: 2024-11-01 to 2024-12-31
+Initial Capital: $10,000.00
+Risk per Trade: 2.0%
+================================================================================
+
+🧹 Cleaning persistent memory...
+
+📊 Downloading price data for BTC-USD...
+✅ Downloaded 60 days of price data
+
+
+================================================================================
+📅 Trading Day 1/9: 2024-11-01
+Current Capital: $10,000.00
+================================================================================
+🤖 Getting agent decision for 2024-11-01...
+================================ Human Message =================================
+
+BTC-USD
+================================== Ai Message ==================================
+Tool Calls:
+  get_order_book_imbalance (call_xz2zvawebcDgvlUdn0a9Gfrz)
+ Call ID: call_xz2zvawebcDgvlUdn0a9Gfrz
+  Args:
+    symbol: BTCUSDT
+  get_taker_buysell_volume (call_PMcWpkry9CRvp9infBxpvZT2)
+ Call ID: call_PMcWpkry9CRvp9infBxpvZT2
+  Args:
+    symbol: BTCUSDT
+    interval: 1h
+  get_funding_rate (call_U9uOgpxWiUXab4RyERomlx2e)
+ Call ID: call_U9uOgpxWiUXab4RyERomlx2e
+  Args:
+    symbol: BTCUSDT
+  get_open_interest (call_e7HyTmbuREF7LpQ8T73lGOkg)
+ Call ID: call_e7HyTmbuREF7LpQ8T73lGOkg
+  Args:
+    symbol: BTCUSDT
+  get_fear_greed_index (call_srGMKGwmswv3UPjKCas6oTeL)
+ Call ID: call_srGMKGwmswv3UPjKCas6oTeL
+  Args:
+  get_coincap_rankings (call_fuL70BDngvna5B3xDQ41Iwjk)
+ Call ID: call_fuL70BDngvna5B3xDQ41Iwjk
+  Args:
+    limit: 20
+================================= Tool Message =================================
+Name: get_coincap_rankings
+
+Error fetching CoinCap rankings: HTTPSConnectionPool(host='api.coincap.io', port=443): Max retries exceeded with url: /v2/assets?limit=20 (Caused by NameResolutionError("HTTPSConnection(host='api.coincap.io', port=443): Failed to resolve 'api.coincap.io' ([Errno 8] nodename nor servname provided, or not known)"))
+================================== Ai Message ==================================
+
+### BTC-USD (BTCUSDT) Market Analysis Report
+
+#### Order Book Analysis
+- **Best Bid**: $90,968.38
+- **Best Ask**: $90,992.74
+- **Spread**: $24.36 (0.0268%)
+- **Total Bid Volume**: 6.4456 (63.98%)
+- **Total Ask Volume**: 3.6292 (36.02%)
+
+**Order Book Imbalance**: **Strong Buy Pressure**  
+> The order book shows a significant imbalance with more bids than asks, indicating potential upward pressure on price. The current spread is tight, suggesting liquidity in the market. This scenario is often indicative of bullish sentiment, but traders should be cautious as market conditions can change rapidly and may not account for hidden orders.
+
+---
+
+#### Taker Buy/Sell Volume (1-Hour Intervals)
+- **Latest Figures**:
+  - **21:00**: Buy=67.2%, Sell=32.8% - Aggressive buying
+  - **22:00**: Buy=52.1%, Sell=47.9% - Balanced
+  - **23:00**: Buy=52.4%, Sell=47.6% - Balanced
+  - **00:00**: Buy=10.5%, Sell=89.5% - Aggressive selling
+  - **01:00**: Buy=82.9%, Sell=17.1% - Aggressive buying
+
+- **Overall Taker Buy Percentage**: 50.57%  
+- **Overall Taker Sell Percentage**: 49.43%
+
+**Market Sentiment**: **Neutral**  
+> The taker buy/sell data reflects a nearly balanced market, with fluctuations indicating moments of both aggressive buying and selling. The last data point shows a strong resurgence in buying, which might suggest a short-term bullish momentum, although the overall sentiment remains neutral as buyers and sellers are closely matched over the analyzed period.
+
+---
+
+#### Market Sentiment: Fear & Greed Index
+- **Current Index Value**: 32/100 (Fear)
+- **7-Day Average**: 47.6/100
+- **30-Day Average**: 31.3/100
+
+**Trend**: **Deteriorating Sentiment**  
+- The Fear & Greed Index indicates that market sentiment is currently categorized as "Fear." In conjunction with the historical averages, this suggests that investor confidence has diminished recently. The significant drop (−11.0 points) signals growing caution among traders, providing possible opportunities for selective buying, especially in dips.
+
+---
+
+#### Conclusion and Trading Implications
+- **Technicals**: The strong buy pressure indicated by the order book, combined with the recent resurgence in taker buying and the state of market sentiment (fear), suggests that buying opportunities may exist presently. Traders should consider cautious entries based on specific price levels and market conditions. 
+- **Risk Management**: Be aware of the fluctuating dynamics present due to recent fear sentiment, which can lead to volatility.
+
+#### Summary Table
+
+| Metric                        | Value                                         | Interpretation                                 |
+|-------------------------------|-----------------------------------------------|------------------------------------------------|
+| **Best Bid**                  | $90,968.38                                   | Strong demand at this price                      |
+| **Best Ask**                  | $90,992.74                                   | Limited supply; tight spread signifies liquidity |
+| **Order Book Imbalance**      | Strong Buy Pressure                           | Suggests upward price movement potential         |
+| **Overall Taker Buy %**       | 50.57%                                       | Neutral sentiment overall with moments of strength|
+| **Current Fear & Greed Index**| 32/100 (Fear)                                | Caution in market, potential buying opportunity  | 
+
+**FINAL TRANSACTION PROPOSAL**: **BUY** (with caution)
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+Tool Calls:
+  get_coingecko_community_stats (call_K3aj761aw50q1wsKqwB7HovY)
+ Call ID: call_K3aj761aw50q1wsKqwB7HovY
+  Args:
+    ticker: BTC
+  get_cryptocompare_social_stats (call_3xBZsM3dRvbiPpBEE9E031RL)
+ Call ID: call_3xBZsM3dRvbiPpBEE9E031RL
+  Args:
+    ticker: BTC
+  get_reddit_crypto_sentiment (call_eDngv4sIPwpeJrfNuN71SnAS)
+ Call ID: call_eDngv4sIPwpeJrfNuN71SnAS
+  Args:
+    subreddit: bitcoin
+    limit: 25
+  get_github_dev_activity (call_xfBaBQl7riennY5rfykKimDf)
+ Call ID: call_xfBaBQl7riennY5rfykKimDf
+  Args:
+    ticker: BTC
+================================= Tool Message =================================
+Name: get_github_dev_activity
+
+## GitHub Development Activity: bitcoin/bitcoin
+
+### Repository Stats:
+- **Stars**: 87,720
+- **Forks**: 38,741
+- **Watchers**: 87,720
+- **Open Issues**: 755
+
+### Recent Activity (Last 4 Weeks):
+- **Commits**: 97
+
+### Analysis:
+- ✅ Active development (97 commits/4wks)
+- ⭐ Highly popular project
+
+================================== Ai Message ==================================
+
+### Bitcoin (BTC) Community and Social Sentiment Analysis
+
+#### 1. CoinGecko Community Stats
+- **Social Media Following**: No specific data available.
+- **Community Analysis**: The report did not provide further metrics.
+
+#### 2. CryptoCompare Social Stats
+- **Metrics Report**: Unfortunately, there seems to be no additional report from CryptoCompare for BTC at this time.
+
+#### 3. Reddit Sentiment (r/bitcoin)
+- **Top Posts**:
+  - **Bitcoin Newcomers FAQ - Please read!**
+    - Score: 73 | Comments: 25 | Upvote Ratio: 99%
+  - **Daily Discussion, January 20, 2026**
+    - Score: 13 | Comments: 20 | Upvote Ratio: 94%
+  - **Depends on the setup**
+    - Score: 1,020 | Comments: 37 | Upvote Ratio: 99%
+  - **Anyone?**
+    - Score: 884 | Comments: 47 | Upvote Ratio: 99%
+  - **Traveled to Mexico with only Bitcoin - withdrew pesos in 2 minutes**
+    - Score: 41 | Comments: 7 | Upvote Ratio: 90%
+
+- **Community Metrics**:
+  - **Average Score**: 205
+  - **Average Comments**: 23
+  - **Average Upvote Ratio**: 89%
+
+- **Sentiment Analysis**: 
+  - The sentiment is largely positive with a high average upvote ratio of 89%, suggesting bullish sentiment among the community.
+
+#### 4. GitHub Development Activity (bitcoin/bitcoin)
+- **Repository Stats**:
+  - **Stars**: 87,720
+  - **Forks**: 38,741
+  - **Watchers**: 87,720
+  - **Open Issues**: 755
+
+- **Recent Activity** (Last 4 weeks):
+  - **Commits**: 97 commits indicate active development.
+
+- **Analysis**: The Bitcoin repository reflects high popularity and significant ongoing development, which is a positive indicator for long-term engagement.
+
+### Synthesis
+- **Community Size & Growth**: The community engagement is strong, especially on Reddit with a significant number of active users discussing various topics.
+- **Engagement Quality**: The high upvote ratios and positive sentiment reflect growing interest.
+- **Development Activity**: Active development on GitHub shows commitment to the project which is a bullish signal.
+
+### Conclusion
+Overall, Bitcoin (BTC) currently demonstrates a strong community presence, positive engagement, and active development. 
+
+### Final Transaction Proposal
+Given these indicators, the overall sentiment and development activity suggest a stable outlook for Bitcoin.
+
+FINAL TRANSACTION PROPOSAL: **HOLD** 
+
+| Metric                        | Value                              |
+|-------------------------------|------------------------------------|
+| Reddit Average Upvote Ratio   | 89% (Positive sentiment)           |
+| GitHub Commits (Last 4 weeks) | 97 commits (Active development)    |
+| GitHub Stars                  | 87,720 (High popularity)           |
+| Reddit Average Comments        | 23                                 |
+| Open Issues                   | 755                                |
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+Tool Calls:
+  get_crypto_news_rss (call_UO0m3sKd97NS8oHyAQ07ZvMf)
+ Call ID: call_UO0m3sKd97NS8oHyAQ07ZvMf
+  Args:
+    curr_date: 2024-11-01
+    look_back_days: 7
+  get_crypto_news_cryptocompare (call_r4ZGfvVwEL1CruPvi5NPYZpJ)
+ Call ID: call_r4ZGfvVwEL1CruPvi5NPYZpJ
+  Args:
+    categories: BTC
+    limit: 10
+  get_global_news_openai (call_nMga4HYBeW1jb34WJjbdPa9f)
+ Call ID: call_nMga4HYBeW1jb34WJjbdPa9f
+  Args:
+    curr_date: 2024-11-01
+  get_google_news (call_rfTiSyykeL6ErTFJ05dD1rk6)
+ Call ID: call_rfTiSyykeL6ErTFJ05dD1rk6
+  Args:
+    query: BTC-USD
+    curr_date: 2024-11-01
+================================= Tool Message =================================
+Name: get_google_news
+
+## BTC-USD Google News, from 2024-10-25 to 2024-11-01:
+
+### Bitcoin Has a Lot Going for It, Except the Persistent Slide in Copper-Gold Ratio (source: Yahoo Finance) 
+
+No snippet available
+
+### MicroStrategy Is Tapped Out, Short Shares And Buy Bitcoin Instead (BTC-USD) (source: Seeking Alpha) 
+
+No snippet available
+
+### Bitcoin Predictions for 2025 & Beyond: Who’s Eyeing $1 Million? (source: TradingView — Track All Markets) 
+
+No snippet available
+
+### BTC over USD: Will BRICS Adopt Putin's Ambitious Alternative Payment System? (source: Finance Magnates) 
+
+No snippet available
+
+### Bitcoin Price Achieves New ATH Against Euro, Surpassing €68,000 for the First Time (source: TradingView — Track All Markets) 
+
+No snippet available
+
+### Bitcoin: The Stars Align For A 6-Figure Bitcoin And Beyond (BTC-USD) (source: Seeking Alpha) 
+
+No snippet available
+
+### BTC/USD: Bitcoin Knocks Out $71,000 as Looming US Elections Stir Crypto Appetite (source: TradingView — Track All Markets) 
+
+No snippet available
+
+### BITCOIN Gaussian Channel telling you the rally has already begun for CRYPTO:BTCUSD by TradingShot (source: TradingView — Track All Markets) 
+
+No snippet available
+
+
+/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py:182: FutureWarning: Calling float on a single element Series is deprecated and will raise a TypeError in the future. Use float(ser.iloc[0]) instead
+  price = float(price_data.loc[closest_date, 'Close'])
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 121, in run_backtest
+    self._execute_trade(decision, trade_date, price_data)
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 236, in _execute_trade
+    result = "✅ WIN" if pnl > 0 else "❌ LOSS"
+                         ^^^^^^^
+  File "/opt/anaconda3/lib/python3.11/site-packages/pandas/core/generic.py", line 1519, in __nonzero__
+    raise ValueError(
+ValueError: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+================================== Ai Message ==================================
+
+### Comprehensive Report on BTC-USD and Current Economic Dynamics (November 1, 2024)
+
+#### 1. **Current State of the Crypto Market (BTC-USD)**
+
+The crypto market is experiencing significant fluctuations amid broader economic developments and market sentiment. Notably, Bitcoin (BTC) has seen both bullish and bearish pressures recently. Key insights include:
+
+- **Market Sentiment**: Bitcoin is battling between bullish potential and bearish corrections. A significant level for traders appears to be near $100,000, indicating a level of optimism that may extend if current momentum can be maintained.
+- **Technical Levels**: Analysts are eyeing crucial technical indicators suggesting BTC may offer long-term strategic entry points. As BTC nears critical thresholds, there is speculation about its trajectory, with some analysts projecting potential price targets exceeding $100,000.
+- **ETF Movements**: The market is grappling with volatility, highlighted by a recent $395 million outflow from Bitcoin ETFs. Such developments raise concerns about liquidity and investor confidence in the face of geopolitical tensions.
+
+Recent crypto news provides insights into various aspects of the market, including potential bullish breakouts and upcoming key levels that could redefine trading strategies.
+
+#### 2. **Macroeconomic Context**
+
+The broader global economy is also influencing crypto markets:
+
+- **US Economic Growth**: The U.S. economy's growth has been reported at a pace of 2.8%, primarily driven by robust consumer spending. This growth, amidst election concerns, suggests that economic confidence could help stabilize asset prices, including cryptocurrencies.
+- **Borrowing Costs**: The rise in the 10-year U.S. Treasury yield to 4.27% is resulting in higher borrowing costs, which may push both traditional and crypto markets into volatility. Increased borrowing costs could dampen investment across various sectors, including tech-forward assets like BTC.
+- **Global Economic Pressures**: Tensions in regions like Yemen and rising inflation concerns globally are compounding economic challenges. Countries facing conflicts and economic downturns may have implications for trading and asset stability internationally.
+
+#### 3. **Recent News Highlights**
+
+**Crypto News**:
+- Major publications indicate a bullish outlook for Bitcoin, with several analysts noting a significant breakout potential.
+- Technical setups suggest an environment ripe for strategic entry; however, there are warnings of downward price corrections as BTC prints new low targets.
+- Increased whale movements and historical patterns suggest positioning ahead of major market shifts influenced by macroeconomic indicators.
+
+**Economic News**:
+- Reports from various sources indicate strengthening US consumer confidence ahead of the elections, which might inject relative stability into the market.
+- Insights on macroeconomic reforms and initiatives in different regions can indicate shifting global investment dynamics that cryptocurrencies like Bitcoin might need to align with.
+
+### Summary Table of Key Insights
+
+| **Category**            | **Insight**                                                                                                                                                                                                           |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **BTC Sentiment**       | Mixed, with bullish breakout potential towards $100,000 alongside bearish corrections.                                                                                                                             |
+| **Technical Indicators** | Key trading levels around $100,000 are critical; optimal entry points are emerging according to market metrics.                                                                                                   |
+| **ETF Movements**       | Recent outflow of $395M from Bitcoin ETFs signals volatility; potential liquidity concerns arise.                                                                                                                  |
+| **US Economic Growth**   | The economy grew at 2.8%, driven by consumer spending, which may support asset stability.                                                                                                                            |
+| **Global Economic**      | Rising borrowing costs may impact investments in cryptocurrencies; geopolitical tensions add to market uncertainty.                                                                                                   |
+| **News Summary**       | Bullish market predictions juxtaposed with warnings on price corrections; macroeconomic developments may influence crypto trends.                                                                                    |
+
+### Final Thoughts
+
+The current macroeconomic environment presents a complex landscape for trading BTC-USD. While the potential for upward movement exists, traders should stay vigilant regarding economic indicators and geopolitical developments, which could shift market dynamics swiftly. 
+
+FINAL TRANSACTION PROPOSAL: **HOLD**
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+Tool Calls:
+  get_coingecko_market_metrics (call_a4fGiwONuw4W1rEgxsDAsPjh)
+ Call ID: call_a4fGiwONuw4W1rEgxsDAsPjh
+  Args:
+    ticker: BTC-USD
+  get_coingecko_developer_activity (call_BozaAqKPeGguU0vNA9XGU4QP)
+ Call ID: call_BozaAqKPeGguU0vNA9XGU4QP
+  Args:
+    ticker: BTC
+  get_bitcoin_network_metrics (call_NkZfqbQeTz5utP2i9j5Q3800)
+ Call ID: call_NkZfqbQeTz5utP2i9j5Q3800
+  Args:
+  get_bitcoin_mining_metrics (call_bxpCCRLUvjSGIKBcwNgWjCzI)
+ Call ID: call_bxpCCRLUvjSGIKBcwNgWjCzI
+  Args:
+================================= Tool Message =================================
+Name: get_bitcoin_mining_metrics
+
+## Bitcoin Mining Metrics
+
+### Network Hashrate & Difficulty:
+- **Network Hash Rate**: 1143146.98 EH/s
+- **Current Difficulty**: 146,472,570,619,930
+- **Next Difficulty Adjustment**: Block 933,407
+
+### Block Production:
+- **Total Blocks Mined**: 933,073
+- **Blocks (24h)**: 157
+- **Average Block Time**: 8.6 minutes
+- **Target Block Time**: 10.0 minutes
+- **Variance from Target**: -13.7%
+
+### Miner Revenue (24h Estimate):
+- **Block Subsidy**: 490.62 BTC ($44,613,248)
+- **Transaction Fees**: -490.62 BTC ($-44,613,248)
+- **Total Revenue**: 0.00 BTC ($0)
+
+### Mining Economics:
+- **Revenue per EH/s/day**: $0.00
+- **Current BTC Price**: $90,931.46
+
+### Mining Analysis:
+- ⬆️  Faster than target blocks (8.6 min) - Difficulty likely to INCREASE
+- 🔒 Extremely high network security (1143147 EH/s)
+- ⚠️  Low fee revenue (0.0%) - Miners heavily reliant on subsidy
+
+================================== Ai Message ==================================
+
+### Bitcoin (BTC) Fundamental Analysis
+
+#### CoinGecko Market Metrics
+- **Current Price**: $90,881.00
+- **Market Capitalization**: $1,815,198,579,049 (#1)
+- **Fully Diluted Valuation**: $1,815,198,579,049
+- **Circulating Supply**: 19,978,300 BTC
+- **Total Supply**: 19,978,300 BTC
+- **Max Supply**: 21,000,000 BTC
+- **% of Max Supply in Circulation**: 95.13%
+
+- **Price Changes**: 
+  - **24 Hours**: -2.25%
+  - **7 Days**: -1.29%
+  - **30 Days**: +2.68%
+  - **1 Year**: -15.17%
+
+- **24h Trading Volume**: $39,611,284,042 
+- **Volume/Market Cap Ratio**: 2.18%
+- **All-Time High**: $126,080 (2025-10-06)
+- **Distance from ATH**: -27.92%
+- **All-Time Low**: $67.81 (2013-07-06)
+- **Distance from ATL**: +133,925.33%
+
+**Market Analysis**: The current high circulating supply (95.1% of max) suggests limited new supply pressure, which could support price stability in the medium to long term.
+
+---
+
+#### Developer Activity
+- **Total GitHub Stats**:
+  - **Stars**: 73,168
+  - **Forks**: 36,426
+  - **Watchers**: 3,967
+  - **Contributors**: 846
+
+- **Code Activity (Last 4 Weeks)**:
+  - **Commits**: 108
+  - **Lines Added**: +1,570
+  - **Lines Deleted**: -1,948
+  - **Net Change**: +3,518 lines
+  
+- **Issue & PR Activity**:
+  - **Total Issues**: 7,743 
+  - **Closed Issues**: 7,380 (Closing Rate: 95.3%)
+  - **Pull Requests Merged**: 11,215
+
+**Developer Activity Analysis**: The significant code activity (108 commits, +3,518 net lines) signals strong ongoing development. A high issue close rate and a large contributor base indicate a robust, active project, which is generally bullish for future performance.
+
+---
+
+#### Network Metrics
+- **Network Hash Rate**: 1,143,146.98 EH/s
+- **Current Mining Difficulty**: 146,472,570,619,930
+- **Mempool Size**: 0.00 MB
+- **Unconfirmed Transactions**: 0
+- **Daily Transactions**: 400,331
+- **Blocks Mined (24h)**: 157
+- **Average Block Size**: 1.84 MB
+- **Average Block Time**: 8.6 minutes
+
+**Network Health Analysis**: The extremely high hash rate reflects a secure network, while the fast block time suggests robust mining activity. The high transaction volume signifies strong usage, which supports the network's health and reliability.
+
+---
+
+#### Mining Metrics
+- **Next Difficulty Adjustment**: Block 933,407
+- **Total Blocks Mined**: 933,073
+- **Block Subsidy**: 490.62 BTC (~$44,613,248)
+- **Transaction Fees**: -490.62 BTC (~-$44,613,248)
+- **Total Revenue**: 0.00 BTC ($0)
+- **Revenue per EH/s/day**: $0.00
+
+**Mining Economics Analysis**: The faster block discovery compared to the target (8.6 min vs. 10 min) indicates that the difficulty is likely to increase. However, low transaction fee revenue poses risks for miners, highlighting their heavy reliance on block subsidies.
+
+---
+
+### Summary Table
+
+| **Metric**                        | **Value**                          |
+|-----------------------------------|------------------------------------|
+| **Current Price**                 | $90,881.00                        |
+| **Market Cap**                    | $1.82 trillion                     |
+| **Circulating Supply**            | 19,978,300 BTC                    |
+| **% of Max Supply**               | 95.13%                             |
+| **1 Year Price Change**           | -15.17%                           |
+| **Total GitHub Stars**            | 73,168                             |
+| **Recent Commits (Last 4 Weeks)**| 108                                |
+| **Average Block Time**            | 8.6 minutes                        |
+| **Network Hash Rate**             | 1.14 million EH/s                 |
+| **Mining Difficulty**              | 146.47 trillion                    |
+| **Total Revenue from Mining**     | $0                                 |
+
+Based on the current analysis of market metrics, development activity, and network health indicators, we will proceed with the following recommendation.
+
+FINAL TRANSACTION PROPOSAL: **HOLD**
+================================ Human Message =================================
+
+Continue
+================================ Human Message =================================
+
+Continue
+================================ Human Message =================================
+
+Continue
+================================ Human Message =================================
+
+Continue
+================================== Ai Message ==================================
+
+After evaluating the proposed investment plan concerning Bitcoin (BTC) and considering the insights from both bullish and bearish analysts, it is clear that the bearish perspective presents significant cautionary points that cannot be overlooked.
+
+The bullish view highlights the potential for growth driven by Bitcoin's scalability and demand, but the bearish analysts provide strong arguments concerning market saturation, financial instability, and the negative market sentiment reflected in tools like the Fear & Greed Index. Given these factors and my past experiences where I held onto positions during bearish cycles, causing unnecessary losses, the prudence lies in adopting a defensive approach.
+
+Here is a consolidated plan of action:
+
+1. **Sell Existing Position**: If you hold Bitcoin, it is necessary to liquidate your position to protect against potential declines. The risks outweigh any potential upside at this moment.
+2. **Reallocation**: Consider reallocating funds into more stable or growth-oriented sectors that can provide a safer haven during market turbulence, such as technology or renewable energy sectors.
+3. **Monitoring**: Keep a close eye on macroeconomic indicators and market sentiment that could indicate future trends in Bitcoin or the cryptocurrency market overall.
+
+Given the analysis and rationale, I firmly recommend taking action to secure profits and minimize exposure to Bitcoin at this time.
+
+FINAL TRANSACTION PROPOSAL: **SELL**
+================================== Ai Message ==================================
+
+After evaluating the proposed investment plan concerning Bitcoin (BTC) and considering the insights from both bullish and bearish analysts, it is clear that the bearish perspective presents significant cautionary points that cannot be overlooked.
+
+The bullish view highlights the potential for growth driven by Bitcoin's scalability and demand, but the bearish analysts provide strong arguments concerning market saturation, financial instability, and the negative market sentiment reflected in tools like the Fear & Greed Index. Given these factors and my past experiences where I held onto positions during bearish cycles, causing unnecessary losses, the prudence lies in adopting a defensive approach.
+
+Here is a consolidated plan of action:
+
+1. **Sell Existing Position**: If you hold Bitcoin, it is necessary to liquidate your position to protect against potential declines. The risks outweigh any potential upside at this moment.
+2. **Reallocation**: Consider reallocating funds into more stable or growth-oriented sectors that can provide a safer haven during market turbulence, such as technology or renewable energy sectors.
+3. **Monitoring**: Keep a close eye on macroeconomic indicators and market sentiment that could indicate future trends in Bitcoin or the cryptocurrency market overall.
+
+Given the analysis and rationale, I firmly recommend taking action to secure profits and minimize exposure to Bitcoin at this time.
+
+FINAL TRANSACTION PROPOSAL: **SELL**
+================================== Ai Message ==================================
+
+After evaluating the proposed investment plan concerning Bitcoin (BTC) and considering the insights from both bullish and bearish analysts, it is clear that the bearish perspective presents significant cautionary points that cannot be overlooked.
+
+The bullish view highlights the potential for growth driven by Bitcoin's scalability and demand, but the bearish analysts provide strong arguments concerning market saturation, financial instability, and the negative market sentiment reflected in tools like the Fear & Greed Index. Given these factors and my past experiences where I held onto positions during bearish cycles, causing unnecessary losses, the prudence lies in adopting a defensive approach.
+
+Here is a consolidated plan of action:
+
+1. **Sell Existing Position**: If you hold Bitcoin, it is necessary to liquidate your position to protect against potential declines. The risks outweigh any potential upside at this moment.
+2. **Reallocation**: Consider reallocating funds into more stable or growth-oriented sectors that can provide a safer haven during market turbulence, such as technology or renewable energy sectors.
+3. **Monitoring**: Keep a close eye on macroeconomic indicators and market sentiment that could indicate future trends in Bitcoin or the cryptocurrency market overall.
+
+Given the analysis and rationale, I firmly recommend taking action to secure profits and minimize exposure to Bitcoin at this time.
+
+FINAL TRANSACTION PROPOSAL: **SELL**
+================================== Ai Message ==================================
+
+After evaluating the proposed investment plan concerning Bitcoin (BTC) and considering the insights from both bullish and bearish analysts, it is clear that the bearish perspective presents significant cautionary points that cannot be overlooked.
+
+The bullish view highlights the potential for growth driven by Bitcoin's scalability and demand, but the bearish analysts provide strong arguments concerning market saturation, financial instability, and the negative market sentiment reflected in tools like the Fear & Greed Index. Given these factors and my past experiences where I held onto positions during bearish cycles, causing unnecessary losses, the prudence lies in adopting a defensive approach.
+
+Here is a consolidated plan of action:
+
+1. **Sell Existing Position**: If you hold Bitcoin, it is necessary to liquidate your position to protect against potential declines. The risks outweigh any potential upside at this moment.
+2. **Reallocation**: Consider reallocating funds into more stable or growth-oriented sectors that can provide a safer haven during market turbulence, such as technology or renewable energy sectors.
+3. **Monitoring**: Keep a close eye on macroeconomic indicators and market sentiment that could indicate future trends in Bitcoin or the cryptocurrency market overall.
+
+Given the analysis and rationale, I firmly recommend taking action to secure profits and minimize exposure to Bitcoin at this time.
+
+FINAL TRANSACTION PROPOSAL: **SELL**
+================================== Ai Message ==================================
+
+After evaluating the proposed investment plan concerning Bitcoin (BTC) and considering the insights from both bullish and bearish analysts, it is clear that the bearish perspective presents significant cautionary points that cannot be overlooked.
+
+The bullish view highlights the potential for growth driven by Bitcoin's scalability and demand, but the bearish analysts provide strong arguments concerning market saturation, financial instability, and the negative market sentiment reflected in tools like the Fear & Greed Index. Given these factors and my past experiences where I held onto positions during bearish cycles, causing unnecessary losses, the prudence lies in adopting a defensive approach.
+
+Here is a consolidated plan of action:
+
+1. **Sell Existing Position**: If you hold Bitcoin, it is necessary to liquidate your position to protect against potential declines. The risks outweigh any potential upside at this moment.
+2. **Reallocation**: Consider reallocating funds into more stable or growth-oriented sectors that can provide a safer haven during market turbulence, such as technology or renewable energy sectors.
+3. **Monitoring**: Keep a close eye on macroeconomic indicators and market sentiment that could indicate future trends in Bitcoin or the cryptocurrency market overall.
+
+Given the analysis and rationale, I firmly recommend taking action to secure profits and minimize exposure to Bitcoin at this time.
+
+FINAL TRANSACTION PROPOSAL: **SELL**
+
+=== TRADING DECISION ===
+"SELL"
+   Decision: SELL
+   Entry Price: $69,482.47
+   Stop Loss: Not set
+   Take Profit: Not set
+❌ Error on 2024-11-01: The truth value of a Series is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+
+================================================================================
+📅 Trading Day 2/9: 2024-11-08
+Traceback (most recent call last):
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 450, in <module>
+    main()
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 439, in main
+    results = backtest.run_backtest(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/shivamsingh/Desktop/CS_Portfolio_Projects/JainCapitalAgenticTrading/backtest_phase2.py", line 98, in run_backtest
+    print(f"Current Capital: ${self.capital:,.2f}")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to Series.__format__

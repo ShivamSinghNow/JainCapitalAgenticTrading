@@ -1,0 +1,219 @@
+🚀 Running Phase 4 TREND-FOLLOWING Backtest
+
+================================================================================
+🔄 PHASE 4 - STRATEGY OVERHAUL: CONTRARIAN → TREND-FOLLOWING
+================================================================================
+Symbol: BTC-USD
+Period: 2024-01-01 to 2024-12-31
+Initial Capital: $10,000.00
+Base Risk per Trade: 2.0%
+
+⚡ PHASE 4 CRITICAL STRATEGY CHANGES:
+  1. 🔄 BUY STRENGTH not fear (Price > MAs, RSI > 50, MACD positive)
+  2. 🔄 ENTRY on momentum signals (not Fear Index < 40)
+  3. 🔄 TRAILING STOP (20-day MA) instead of fixed stop
+  4. 🔄 NO TAKE PROFIT - ride trend until break
+  5. 🔄 TIGHTER initial stop (-2.5% vs -3.5%)
+  6. 🔄 HOLD during downtrends (no contrarian catches)
+
+📊 Why This Should Work:
+  - Avoids falling knives (Trade 1, 7, 8 from Phase 3.2)
+  - Lets winners run (no +7% cap)
+  - Exits on trend breaks (not arbitrary time stops)
+  - Targets 40-50% win rate, 5:1+ R:R ratio
+================================================================================
+
+🧹 Cleaning persistent memory...
+
+📥 Fetching price data for BTC-USD...
+✅ Fetched 365 days of data
+
+📅 Generated 52 weekly decision points
+
+
+================================================================================
+Decision #1/52: 2024-01-05
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $44,163 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #2/52: 2024-01-12
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $42,853 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #3/52: 2024-01-19
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $41,618 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #4/52: 2024-01-26
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $41,817 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #5/52: 2024-02-02
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $43,186 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #6/52: 2024-02-09
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $47,147 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #7/52: 2024-02-16
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $52,160 < MA50 $nan
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #8/52: 2024-02-23
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $50,732 < MA50 $45,242
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #9/52: 2024-03-01
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $62,441 < MA50 $46,899
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #10/52: 2024-03-08
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $68,300 < MA50 $50,129
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #11/52: 2024-03-15
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $69,404 < MA50 $54,346
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #12/52: 2024-03-22
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
+   📊 Signal Strength: NO_TREND
+      Downtrend or sideways: Price $63,779 < MA50 $57,595
+   ❌ DOWNTREND FILTER BLOCKED: No uptrend confirmed
+
+================================================================================
+Decision #13/52: 2024-03-29
+Capital: $10,000.00
+================================================================================
+
+🤖 Running multi-agent decision system...
+⚠️  CryptoPanic API unavailable (Cloudflare protection). Using RSS feeds as alternative...
+
+💡 Agent Decision: BUY (Conviction: medium)
+
+   🔍 PHASE 4 TREND-FOLLOWING FILTERS:
